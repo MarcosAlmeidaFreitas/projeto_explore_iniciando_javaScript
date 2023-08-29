@@ -125,8 +125,97 @@ console.log("o resultado da soma é: " + sum(2, 3)); // 2 e 3 são os argumentos
 // O JS vai concaternar os argumentos como se fosse duas strings em uma String.
 // E obtemos como resultado uma string "95"
 // Isso se chama Type Coersion pois como são tipos de dados diferentes ele concatena para não quebrar;
-console.log('9' + 5); 
+//console.log('9' + 5); 
 
 // Agora convertemos manualmente a string para numero. Para obtermos o resultado de 14 que é 9 + 5
 // Isso se chama Type Conversion 
-console.log(Number('9') + 5);
+//console.log(Number('9') + 5);
+
+// //Convertendo uma String em numero e Numero em uma String
+
+// let string = "1234";
+// let numero = Number(string);
+// console.log(numero);
+
+
+// let number = 1234;
+// let text = String(number);
+// console.log(text);
+
+
+// // Contando a quantidade de caracteres de uma palavra. 
+// let word = "Paralelepipedo";
+// console.log(`A palavra ${word} tem ${word.length} letras.`);
+
+// //Contando a quantidade de caracteres de um numero.
+// //Como a propriedade length não funciona com numeros temos que converter ele primeiro para String 
+// //para depois contar.
+
+// let number = 12345;
+// console.log(`O numero ${number} possui`, String(number).length, "caracteres");
+
+
+
+//Transformar um numero quebrado com 2 casas decimais e trocar o ponto por virgula
+//let number = 345.33452345;
+//transformando o numero em duas casas decimais.
+//console.log(Number(number.toFixed(2)));
+
+//Convertendo o numero para duas casas decimais o numero vira uma String, Você poderia transformar,
+//em number de novo porem quando você troca o ponto pela virgula não tem como converter mais. 
+//Porque a virgula não existe na classe dos numeros.
+//console.log(String(number.toFixed(2).replace(".", ",")));
+
+
+// //Convertendo letra minuscula em maiuscula e vice versa.
+// let text = "Programar é muito bom";
+// text = text.toUpperCase();
+// console.log(text);
+// text = text.toLowerCase();
+// console.log(text);
+
+
+// // Transformando uma frase em itens de um arrayList e depois unindo as palavras através do "_"
+// let text = "Eu serei um grande programador de JS";
+// //Função Split tem o objetivo de separar as palavras
+// let myArray = text.split(" ");
+// console.log(myArray);
+// //A função join tem o objetivo de juntar as palavras.
+// textUnderScore = myArray.join("_");
+// console.log(textUnderScore)
+
+
+
+// //Buscando uma palavra dentro de uma String.
+// let text = "Eu serei um grande programador de JS";
+// let word = "Eu";
+// let trueOrFalse = text.includes(word);
+// if(trueOrFalse === true) console.log(`CONTEM a palavra ${word.toUpperCase()} na frase:\n`, '"'+text+'".');
+// else console.log(`NÃO EXISTE a palavra ${word.toUpperCase()} na frase:\n`, '"'+text+'".');
+
+
+//criando array com construtor
+// let myArray = new Array(10); //criando um Array vazio com 10 posições.
+
+
+//Transformando uma palavra em uma cadeia de caracteres em um arrayList.
+// let word = "manipulação";
+// console.log(Array.from(word));
+
+
+//Adicionando um elemento no final do Array. 
+let techs = new Array();
+techs = ["HTML", "CSS", "JS"];
+techs.push("Java");
+console.log(techs);
+
+//Adicionando um elemento no inicio do Array.
+techs.unshift("C++");
+console.log(techs);
+
+//removendo um item do final do Array.
+techs.pop();
+console.log(techs);
+
+
+
