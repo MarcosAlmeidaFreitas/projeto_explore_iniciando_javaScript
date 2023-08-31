@@ -203,19 +203,139 @@ console.log("o resultado da soma é: " + sum(2, 3)); // 2 e 3 são os argumentos
 // console.log(Array.from(word));
 
 
-//Adicionando um elemento no final do Array. 
-let techs = new Array();
-techs = ["HTML", "CSS", "JS"];
-techs.push("Java");
-console.log(techs);
+// //Adicionando e removendo no Array 
+// let techs = new Array();
+// techs = ["HTML", "CSS", "JavaScript","SQL", "C#", "React"];
+// console.log(techs);
 
-//Adicionando um elemento no inicio do Array.
-techs.unshift("C++");
-console.log(techs);
+// //Adicionando um item no final do Array
+// techs.push("Java");
+// console.log(techs);
 
-//removendo um item do final do Array.
-techs.pop();
-console.log(techs);
+// //Adicionando um elemento no inicio do Array.
+// techs.unshift("C++");
+// console.log(techs);
+
+// //Removendo um elemento no inicio do array.
+// techs.shift();
+// console.log(techs);
+
+// //removendo um item do final do Array.
+// techs.pop();
+// console.log(techs);
+
+// //obtendo itens de um array, sempre quando for obter você coloca o inicio e o final mais 1
+// // como se fosse parar no proximo termo. 
+// let recorte_array = techs.slice(2,4);
+// console.log(`Esse(s) são os ${recorte_array.length} iten(s)`, recorte_array);
+// //removendo através de um indicie.
+// console.log("A linguagem JavaScript está na posição n°: ", techs.indexOf("JavaScript"));
+
+// techs.splice(techs.indexOf("JavaScript"), 1); //segundo argumento é a quantidade de itens a remover
+// // com a função splice
+// console.log(techs);
+
+// //Qual é a diferença entre os dois consoles logs?
+// let increment = 0;
+
+// console.log(++increment);
+// console.log(increment++);
+
+// //O primeiro ele vai incrementar a variável e depois exibir o resultado.
+// // Já o segundo ele vai incremetar a variavel depois que exibir o resultado 
+// //então ele iria apresentar o resultado de 0 e incrementar a variável,
+// // exibindo 1 no proximo console.log.
+
+
+// //Como fazer exponenciação no JS
+// let result = 2 ** 3;
+
+
+// //Operador ternario
+// //se uma pessoa pode dirigir
+
+// let age = 16;
+
+// let drive = age >=18 ? "Can Drive" : "can't drive";
+// console.log(drive);
 
 
 
+// let x = 1;
+// x += 2;
+
+/*Coisas que são consideradas falsas dentro de uma condicional ou de um loop no JS.
+
+false 
+0
+-0
+""
+null
+undefined
+NaN
+
+
+
+Coisas que são consideradas true dentro de uma condicional ou loop.
+
+true
+{} chaves e colchetes são considerados verdadeiros pois são objetos e arrays mesmo sendo vazios
+[]
+1
+3.23   qualquer numero é considerado verdadeiro
+"0"    qualquer 
+"false" 
+-1
+Infinity
+infinity
+
+*/
+
+//console.log(3.24 ? "Verdadeiro" : "Falso");
+
+
+/* Prioridades na ordem dos operadores
+
+  1- Grouping                   ()
+  2- Negação e Incremento       ! ++ --
+  3- Multiplicação e Divisão    * /
+  4- Adição e Subtração         + -
+  5- Operador Relacional        < <= > >=
+  6- Operadores de comparação   == != === !==
+  7- AND                        &&
+  8- OR                         ||
+  9- Condicional                ?:
+  10- Assignment (atribuição)   = += -= *=
+
+*/
+
+
+let temperature = 37;
+let hightTemperature = temperature >= 37.5;
+let mediumTemperature = temperature < 37.5 && temperature > 37;
+
+
+if(hightTemperature){
+  console.log('Febre alta');
+}else if(mediumTemperature){
+  console.log('Febre Moderada')
+}else{
+  console.log('Saudavel');
+}
+
+const calc = (number1, operator, number2) =>{
+  let result;
+  switch(operator){
+    case '+':
+      return number1 + number2;
+      //pode usar o break tambem
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    case '/':
+      return number1 / number2;
+    case '%':
+      return number1 % number2;
+  }
+}
