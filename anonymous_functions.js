@@ -310,32 +310,97 @@ infinity
 */
 
 
-let temperature = 37;
-let hightTemperature = temperature >= 37.5;
-let mediumTemperature = temperature < 37.5 && temperature > 37;
+// let temperature = 37;
+// let hightTemperature = temperature >= 37.5;
+// let mediumTemperature = temperature < 37.5 && temperature > 37;
 
 
-if(hightTemperature){
-  console.log('Febre alta');
-}else if(mediumTemperature){
-  console.log('Febre Moderada')
-}else{
-  console.log('Saudavel');
+// if(hightTemperature){
+//   console.log('Febre alta');
+// }else if(mediumTemperature){
+//   console.log('Febre Moderada')
+// }else{
+//   console.log('Saudavel');
+// }
+
+// const calc = (number1, operator, number2) =>{
+//   let result;
+//   switch(operator){
+//     case '+':
+//       return number1 + number2;
+//       //pode usar o break tambem
+//     case '-':
+//       return number1 - number2;
+//     case '*':
+//       return number1 * number2;
+//     case '/':
+//       return number1 / number2;
+//     case '%':
+//       return number1 % number2;
+//     default:
+//       console.log("Não Implementado");
+//   }
+// }
+
+// console.log(calc(2, "%", 3));
+
+
+//Usando o throw.
+// function sayMyName(name = ''){
+//   if(name === ''){
+//     throw 'O NOME é obrigatório';
+//     //ele vai parar a aplicação aqui.
+//     //E passar para o catch. Mas executara o throw como se fosse uma exceção.
+
+//   }
+// }
+
+// try{
+//   sayMyName();
+// }catch(error){
+//   console.log('Foi encontrado o seguinte erro: ' + error);
+// }
+
+
+//Usando o continue em um for para pular essa execução 
+
+// for(let i=0; i<=10; i++){
+//   if(i === 5){
+//     continue; //Quando ele entrar no if e achar o continue 
+//     //ele vai parar o comando da iteração 5 e e vai para iteração 6 
+//   }
+
+//   console.log(i);
+// }
+
+
+// //for of
+// //Usado quando queremos percorrer uma lista ou uma variavel ou um array
+// let name = "Marcos Antonio";
+
+// //Vamos percorrer a variavel name imprindo a variavel mais o ponto
+// for(let letter of name){
+//   //e se for espaço vai dar um contra barra para quebra a linha
+//   if(letter === " " || letter === ""){
+//     console.log("\n");
+//   }else{
+//     console.log(letter + ".");
+//   }
+// }
+
+
+
+
+//for in
+//Usando para quando queremos percorrer os atributos de um objeto.
+
+let person = {
+  name: 'Fulano',
+  age: 30,
+  weight: 88.5
 }
 
-const calc = (number1, operator, number2) =>{
-  let result;
-  switch(operator){
-    case '+':
-      return number1 + number2;
-      //pode usar o break tambem
-    case '-':
-      return number1 - number2;
-    case '*':
-      return number1 * number2;
-    case '/':
-      return number1 / number2;
-    case '%':
-      return number1 % number2;
-  }
+
+for(let property in person){
+  console.log(property + ": " + person[property]);
 }
